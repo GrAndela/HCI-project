@@ -13,7 +13,7 @@ const SupportUs = () => {
                 <section className="support-us-section">
                     <h2 className="section-subtitle">How to Donate</h2>
                     <p>
-                        Donations are vital for our shelter's operations. Your contributions help cover the costs of food, medical care,
+                        Donations are vital for our operations. Your contributions help cover the costs of food, medical care,
                         and shelter maintenance. Here’s how you can donate:
                     </p>
                     <ul>
