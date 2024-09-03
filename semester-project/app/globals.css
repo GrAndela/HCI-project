@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import '../components/footer/footer.css';
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 245, 245, 220;
+  --background-end-rgb: 255, 255, 255;
+  --background-color: #ffd699;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 30, 30, 30;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.title {
+  color: #e8964d; 
+  text-align: left;
+  font-size: 42px;
+  letter-spacing: 0.5em;
+}
+
+.title span {
+  color: #663300; 
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+}
+
+.main-content {
+  flex: 1; 
+}
+
+.footer-distributed {
+  background: #e8964d;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 14px sans-serif;
+  padding: 30px 20px;
+  position: relative; 
+  margin-top: auto; 
+}
+
+@media (max-width: 640px) {
+  .title {
+    font-size: 30px; /* Smaller font size for mobile screens */
+    text-align: center; /* Center the title on small screens */
+    letter-spacing: 0.3em; /* Adjust letter spacing for readability */
+    padding: 10px; /* Add some padding */
+  }
+}

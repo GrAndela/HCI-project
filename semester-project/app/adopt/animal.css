@@ -1,0 +1,188 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  align-items: center;
+  min-height: 100vh; 
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background-color: #ffd699;
+  border-radius: 40px;
+  box-sizing: border-box;
+}
+
+.name {
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 40px;
+  font-size: 30px;
+  color: #ffd699;
+  
+}
+
+.animal-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #cc6600;
+  border-radius: 50px;
+  height: 400px !important;
+  box-sizing: border-box;
+}
+
+.animal-image {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 40px;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.animal-description {
+  flex-grow: 1;
+  color: #663300;
+}
+
+.read-more-link {
+  text-decoration: none;
+  color: #ffd699;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-left: 40px;
+  margin-bottom: 10px;
+  align-self: flex-start;
+}
+
+/* Filter container */
+.filter-container {
+  margin: 20px 0;
+  color: #663300;
+  text-align: center; /* Center align the filter */
+}
+
+/* Filter label */
+.filter-label {
+  display: block;
+  margin-bottom: 10px; /* Space between label and dropdown */
+  font-size: 18px; /* Adjust font size as needed */
+  color: #663300;
+}
+
+/* Filter select dropdown */
+.filter-select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 20px; /* Match the border radius from other elements */
+  border: 1px solid #cc6600; /* Match the border color */
+  background-color: #ffd699; 
+  color: #663300; /* Text color for filter options */
+  cursor: pointer; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for better visibility */
+}
+
+.filter-select:focus {
+  outline: none; /* Remove default focus outline */
+  border-color: #663300; /* Highlight border color on focus */
+  box-shadow: 0 0 0 3px rgba(102, 51, 0, 0.2); /* Add focus shadow effect */
+}
+
+/* Media queries for responsiveness */
+
+/* Mobile Devices (up to 639px) */
+@media (max-width: 639px) {
+  .main-container {
+    padding: 10px;
+    align-items: center;
+    margin: auto;
+    box-sizing: border-box; /* Ensure padding is included in width/height calculations */
+  }
+
+  .name {
+    font-size: 20px;
+    margin-top: 10px;
+    text-align: center; /* Center align text */
+    width: 100%; /* Ensure it fits within the container */
+    box-sizing: border-box;
+  }
+
+  .animal-box {
+    padding: 10px; /* Increased padding for better spacing */
+    border-radius: 20px;
+    width: 100%; /* Ensure it uses full width */
+    box-sizing: border-box;
+    background-color: #cc6600; /* Ensure background color is applied */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align content */
+    margin-bottom: 20px; /* Space between animal boxes */
+    height: 1200px;
+  }
+
+  .animal-image {
+    width: 80%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    aspect-ratio: 3 / 2; /* Maintain consistent aspect ratio */
+    object-fit: cover; /* Ensure image covers the area */
+    border-radius: 15px; /* Slightly rounded corners */
+    margin-bottom: 10px; /* Space below the image */
+  }
+
+  .animal-description {
+    font-size: 5px; /* Increased font size for readability */
+    overflow-wrap: break-word; /* Ensure text wraps properly */
+    margin: 0 10px; /* Add side margins to prevent text from touching edges */
+    margin-bottom: 10px;
+    text-align: center; /* Center align text */
+    width: 100%;
+    box-sizing: border-box;
+    flex-grow: 1;
+    height: auto;
+  }
+
+  .read-more-link {
+    text-decoration: none;
+    color: #ffd699; /* Link color */
+    font-weight: bold;
+    font-size: 14px; /* Increase font size for readability */
+    margin-top: 10px; /* Space above the link */
+    margin-bottom: 10px;
+    display: block; /* Ensure the link takes up full width */
+    text-align: center; /* Center align text */
+  }
+
+  .filter-select {
+    width: 100%; /* Full width on mobile */
+    font-size: 14px; /* Adjust font size */
+  }
+}
+
+/* Tablets and Small Desktops (640px - 1023px) */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .main-container {
+      padding: 15px;
+  }
+
+  .name {
+      font-size: 26px;
+      width: 100%;
+  }
+
+  .animal-box {
+      padding: 10px;
+      border-radius: 30px;
+  }
+
+  .animal-description {
+      font-size: 15px;
+      width: 100%;
+  }
+}
